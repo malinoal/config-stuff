@@ -133,9 +133,15 @@ set completeopt+=noselect
 
 let g:mucomplete#enable_auto_at_startup = 1
 
+"Make enter work for autocompletion
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 let mapleader = ","
 nnoremap <C-M> :w<CR>:make<CR>
 nnoremap <leader>n :cNext<CR>
 nnoremap <leader>p :cprevious<CR>
 nnoremap <leader>co :copen<CR>
 nnoremap <leader>cc :cclose<CR>
+
+set listchars=tab:<->,trail:~,extends:>,precedes:<
+set list
