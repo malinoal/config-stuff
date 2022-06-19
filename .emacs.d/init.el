@@ -49,6 +49,7 @@
 (add-hook 'ts-mode-hook #'lsp)
 (add-hook 'typescript-mode-hook #'lsp)
 (add-hook 'html-mode-hook #'lsp)
+(add-hook 'c-mode-hook #'lsp)
 ;;(add-hook 'prog-mode-hook #'lsp)
 (require 'lsp-java)
 (add-hook 'java-mode-hook #'lsp)
