@@ -12,6 +12,22 @@
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+
+;; Download lsp stuff
+(unless (package-installed-p 'lsp-mode)
+  (package-install 'lsp-mode))
+(unless (package-installed-p 'lsp-ui)
+  (package-install 'lsp-ui))
+(unless (package-installed-p 'company)
+  (package-install 'company))
+(unless (package-installed-p 'lsp-java)
+  (package-install 'lsp-java))
+(unless (package-installed-p 'typescript-mode)
+  (package-install 'typescript-mode))
+(unless (package-installed-p 'editorconfig)
+  (package-install 'editorconfig))
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -19,7 +35,8 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil)))
+   (quote
+    (csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,6 +50,7 @@
 (add-hook 'ts-mode-hook #'lsp)
 (add-hook 'typescript-mode-hook #'lsp)
 (add-hook 'html-mode-hook #'lsp)
+(add-hook 'c-mode-hook #'lsp)
 ;;(add-hook 'prog-mode-hook #'lsp)
 (require 'lsp-java)
 (add-hook 'java-mode-hook #'lsp)
