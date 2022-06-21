@@ -35,8 +35,8 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   (quote
-    (csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))))
+   '(helm projectile csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -76,3 +76,5 @@
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 (setq visible-bell 1)
+
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
