@@ -35,7 +35,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(projectile csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))
+   '(helm projectile csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -52,6 +52,7 @@
 (add-hook 'html-mode-hook #'lsp)
 (add-hook 'c-mode-hook #'lsp)
 (add-hook 'csharp-mode-hook #'lsp)
+(add-hook 'org-mode-hook #'company-mode)
 ;;(add-hook 'prog-mode-hook #'lsp)
 (require 'lsp-java)
 (add-hook 'java-mode-hook #'lsp)

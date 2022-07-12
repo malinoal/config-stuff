@@ -52,6 +52,7 @@
 (add-hook 'html-mode-hook #'lsp)
 (add-hook 'c-mode-hook #'lsp)
 (add-hook 'csharp-mode-hook #'lsp)
+(add-hook 'org-mode-hook #'company-mode)
 ;;(add-hook 'prog-mode-hook #'lsp)
 (require 'lsp-java)
 (add-hook 'java-mode-hook #'lsp)
@@ -78,3 +79,5 @@
 (setq visible-bell 1)
 
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'org-mode-hook 'display-line-numbers-mode)
+(add-hook 'org-mode-hook 'visual-line-mode)
