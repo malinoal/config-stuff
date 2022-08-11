@@ -81,3 +81,11 @@
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'org-mode-hook 'display-line-numbers-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
+
+
+(add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
+(require 'evil-org)
+(add-hook 'org-mode-hook 'evil-org-mode)
+(evil-org-set-key-theme '(navigation insert textobjects additional calendar))
+(require 'evil-org-agenda)
+(evil-org-agenda-set-keys)

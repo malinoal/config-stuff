@@ -79,3 +79,5 @@
 (setq visible-bell 1)
 
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'org-mode-hook 'display-line-numbers-mode)
+(add-hook 'org-mode-hook 'visual-line-mode)
