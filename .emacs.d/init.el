@@ -82,6 +82,9 @@
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'org-mode-hook 'display-line-numbers-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
+(setq display-fill-column-indicator-column 120)
+(add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
+(add-hook 'org-mode-hook 'display-fill-column-indicator-mode)
 
 
 (add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")

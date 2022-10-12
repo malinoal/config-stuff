@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/user/Documents/0-Uni/BA-code'
 let g:netrw_dirhist_1='/home/user/Documents/0-Uni/SS22/MulInt/project/mmi-ss22/Assets/Scenes'
 let g:netrw_dirhist_0='/home/user/Documents/0-Uni/SS22/MulInt/project/mmi-ss22/Assets'
 let g:netrw_dirhist_9='/home/user/Documents/0-Uni/SS22/MulInt/project/mmi-ss22'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_6='/home/user/Documents/0-Uni/SS22/MulInt/project/mmi-ss22/P
 let g:netrw_dirhist_5='/home/user/Documents/0-Uni/SS22/MulInt/project/mmi-ss22'
 let g:netrw_dirhist_4='/home/user/Documents/0-Uni/SS22/MulInt/project/mmi-ss22/Packages'
 let g:netrw_dirhist_3='/home/user/Documents/0-Uni/SS22/MulInt/project/mmi-ss22'
-let g:netrw_dirhist_2='/home/user'
