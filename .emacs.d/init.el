@@ -93,3 +93,28 @@
 (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
 (require 'evil-org-agenda)
 (evil-org-agenda-set-keys)
+
+;; enable python code eval in org-mode
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
+(defun org-babel-edit-prep:python (babel-info)
+  (setq-local buffer-file-name (->> babel-info caddr (alist-get :tangle)))
+  (lsp))
+(setq org-babel-python-command "python3")
+(setq org-confirm-babel-evaluate nil)
+(defun set-exec-path-from-shell-PATH ()
+  "Set up Emacs' `exec-path' and PATH environment variable to match
+that used by the user's shell.
+
+This is particularly useful under Mac OS X and macOS, where GUI
+apps are not started from a shell."
+  (interactive)
+  (let ((path-from-shell (replace-regexp-in-string
+			  "[ \t\n]*$" "" (shell-command-to-string
+					  "$SHELL --login -c 'echo $PATH'"
+						    ))))
+    (setenv "PATH" path-from-shell)
+    (setq exec-path (split-string path-from-shell path-separator))))
+
+(set-exec-path-from-shell-PATH)
