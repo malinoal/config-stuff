@@ -34,7 +34,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
- '(org-agenda-files '("~/Documents/0-Uni/BA/pre-notes.org"))
+ '(org-agenda-files
+   '("~/Documents/misc/notes/goals.org" "/home/user/Documents/0-Uni/BA/pre-notes.org"))
  '(package-selected-packages
    '(helm projectile csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))
  '(tool-bar-mode nil))

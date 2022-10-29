@@ -5,3 +5,4 @@ cp -r ~/.vim/ .
 cp ~/Documents/dev/dwm/config.h dwm/config.h
 cp ~/Documents/dev/dmenu/config.h dmenu/config.h
 cp ~/Documents/dev/slstatus/config.h slstatus/config.h
+cp ~/.bashrc .
