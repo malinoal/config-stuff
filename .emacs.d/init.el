@@ -37,7 +37,7 @@
  '(org-agenda-files
    '("~/Documents/misc/notes/goals.org" "/home/user/Documents/0-Uni/BA/pre-notes.org"))
  '(package-selected-packages
-   '(helm projectile csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))
+   '(geiser-mit helm projectile csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -119,3 +119,6 @@ apps are not started from a shell."
     (setq exec-path (split-string path-from-shell path-separator))))
 
 (set-exec-path-from-shell-PATH)
+
+;disable warnings from plugin compilation
+(setq native-comp-async-report-warnings-errors 'silent)
