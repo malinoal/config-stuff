@@ -123,6 +123,8 @@ export PS1="[\[$(tput sgr0)\]\[\033[38;5;6m\]\t\[$(tput sgr0)\]][\$?] \[$(tput s
 
 export PATH=$PATH:~/.cargo/bin
 
+alias e="emacsclient -t -a \"\""
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/user/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
