@@ -33,18 +33,20 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(tsdh-light))
+ '(custom-enabled-themes '(catppuccin))
+ '(custom-safe-themes
+   '("d77d6ba33442dd3121b44e20af28f1fae8eeda413b2c3d3b9f1315fbda021992" default))
  '(inhibit-startup-screen t)
  '(org-agenda-files '("~/Documents/0-uni/bachelor-thesis/todo.org"))
  '(package-selected-packages
-   '(magit geiser-mit helm projectile csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))
+   '(catppuccin-theme lua-mode bison-mode ag magit geiser-mit helm projectile csharp-mode editorconfig typescript-mode ts ## company lsp-ui lsp-java lsp-mode evil))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Fira Code" :foundry "CTDB" :slant normal :weight regular :height 98 :width normal)))))
 
 ;; LSP support
 (require 'lsp-mode)
@@ -124,3 +126,12 @@ apps are not started from a shell."
 
 ;disable warnings from plugin compilation
 (setq native-comp-async-report-warnings-errors 'silent)
+
+
+;setup common lisp
+(load (expand-file-name "~/.quicklisp/slime-helper.el"))
+(setq inferior-lisp-program "sbcl")
+
+;set catpuccin to light theme
+(setq catppuccin-flavor 'latte) ;; 'latte, 'frappe 'macchiato, or 'mocha
+(catppuccin-reload)
